@@ -8,5 +8,6 @@ target 'Balls Counter' do
   # Pods for Balls Counter
   pod 'RxSwift', '~> 4.1.2'
   pod 'RxCocoa', '~> 4.1.2'
+  pod 'RxDataSources', '~> 3.0.2'
 
 end

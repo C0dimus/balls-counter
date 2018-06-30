@@ -9,37 +9,35 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxDataSources
 
 class MainViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopResetButton: UIButton!
     
+    private static let timeInterval = 1.0
     private let disposeBag = DisposeBag()
     private var counterViewModel = CounterViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        counterViewModel.balls.asObservable()
-            .subscribe(onNext: { balls in
-                if let lastBall = balls.last {
-                    print("Ball: \(lastBall.type) \(lastBall.value)")
-                }
-            }).disposed(by: disposeBag)
-        
-        bindCollectionView()
+        prepareCollectionView()
         bindButtons()
     }
     
-    private func bindCollectionView() {
+    private func prepareCollectionView() {
         collectionView.register(UINib(nibName: BallCollectionViewCell.CellId, bundle: Bundle.main), forCellWithReuseIdentifier: BallCollectionViewCell.CellId)
-        
-        counterViewModel.balls.asObservable().bind(to: collectionView.rx.items) { (collectionView, row, element) in
-            let indexPath = IndexPath(row: row, section: 0)
+
+        let dataSource = RxCollectionViewSectionedAnimatedDataSource<BallSectionModel>(configureCell:  { (_, collectionView, indexPath, ballModel) in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BallCollectionViewCell.CellId, for: indexPath) as! BallCollectionViewCell
-            cell.fill(ballModel: element)
+            cell.fill(with: ballModel)
             return cell
-            }
+        }, configureSupplementaryView: {_, _, _, _ in return UICollectionReusableView() })
+        
+        counterViewModel.balls.asDriver()
+            .map{ [BallSectionModel(header: "", items: $0)] }
+            .drive(collectionView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
     }
     
@@ -54,13 +52,12 @@ class MainViewController: UIViewController {
             .disposed(by: disposeBag)
         
         startButton.rx.tap
-            .debounce(0.5, scheduler: MainScheduler.instance)
-            .subscribe(onNext: { [weak self] in
-                print("start pressed")
-                self?.startTimer()
+            .throttle(0.5, scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [unowned self] in
+                self.startTimer()
             }).disposed(by: disposeBag)
         stopResetButton.rx.tap
-            .debounce(0.5, scheduler: MainScheduler.instance)
+            .throttle(0.5, scheduler: MainScheduler.instance)
             .subscribe(onNext: { [unowned self] in
                 if self.counterViewModel.isTimerRunning.value {
                     self.counterViewModel.isTimerRunning.value = false
@@ -72,11 +69,11 @@ class MainViewController: UIViewController {
     
     private func startTimer() {
         self.counterViewModel.isTimerRunning.value = true
-        Observable<Int>.interval(1.0, scheduler: MainScheduler.instance)
-            .takeWhile({ [unowned self] i -> Bool in
+        Observable<Int>.interval(MainViewController.timeInterval, scheduler: MainScheduler.instance)
+            .takeWhile({ [unowned self] _ -> Bool in
                 self.counterViewModel.isTimerRunning.value
             })
-            .subscribe(onNext: {[unowned self] i in
+            .subscribe(onNext: { [unowned self] _ in
                 self.counterViewModel.generateRandom()
             }).disposed(by: disposeBag)
     }

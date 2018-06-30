@@ -19,7 +19,7 @@ class BallCollectionViewCell: UICollectionViewCell {
     
     }
     
-    func fill(ballModel: BallModel) {
+    func fill(with ballModel: BallModel) {
         switch ballModel.type {
         case .red:
             bgView.backgroundColor = UIColor.lavaRed

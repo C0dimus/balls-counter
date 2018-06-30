@@ -29,10 +29,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sz0-F4-7hJ">
                                 <rect key="frame" x="27" y="39.5" width="46" height="21.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.81176470590000005" green="0.062745098040000002" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Sz0-F4-7hJ" firstAttribute="centerY" secondItem="0Sn-bt-6bV" secondAttribute="centerY" id="L56-Pu-7zi"/>
                             <constraint firstItem="Sz0-F4-7hJ" firstAttribute="centerX" secondItem="0Sn-bt-6bV" secondAttribute="centerX" id="yxW-rS-LzQ"/>

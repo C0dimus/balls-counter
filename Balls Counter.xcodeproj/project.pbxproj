@@ -10,6 +10,7 @@
 		048EFF8B20E7906500AF7CB2 /* BallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EFF8920E7906500AF7CB2 /* BallCollectionViewCell.swift */; };
 		048EFF8C20E7906500AF7CB2 /* BallCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048EFF8A20E7906500AF7CB2 /* BallCollectionViewCell.xib */; };
 		048EFF8F20E792D400AF7CB2 /* UIColor+customColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EFF8E20E792D400AF7CB2 /* UIColor+customColors.swift */; };
+		048EFF9120E7EB4600AF7CB2 /* BallSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EFF9020E7EB4600AF7CB2 /* BallSectionModel.swift */; };
 		04CD6F1020E2D96F00985BA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD6F0F20E2D96F00985BA2 /* AppDelegate.swift */; };
 		04CD6F1520E2D96F00985BA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CD6F1320E2D96F00985BA2 /* Main.storyboard */; };
 		04CD6F1720E2D96F00985BA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CD6F1620E2D96F00985BA2 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		048EFF8920E7906500AF7CB2 /* BallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallCollectionViewCell.swift; sourceTree = "<group>"; };
 		048EFF8A20E7906500AF7CB2 /* BallCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BallCollectionViewCell.xib; sourceTree = "<group>"; };
 		048EFF8E20E792D400AF7CB2 /* UIColor+customColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+customColors.swift"; sourceTree = "<group>"; };
+		048EFF9020E7EB4600AF7CB2 /* BallSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallSectionModel.swift; sourceTree = "<group>"; };
 		04CD6F0C20E2D96F00985BA2 /* Balls Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Balls Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CD6F0F20E2D96F00985BA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04CD6F1420E2D96F00985BA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				04CD6F2920E2E7CF00985BA2 /* BallModel.swift */,
+				048EFF9020E7EB4600AF7CB2 /* BallSectionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -259,12 +262,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Balls Counter/Pods-Balls Counter-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +289,7 @@
 				048EFF8B20E7906500AF7CB2 /* BallCollectionViewCell.swift in Sources */,
 				04CD6F2A20E2E7CF00985BA2 /* BallModel.swift in Sources */,
 				048EFF8F20E792D400AF7CB2 /* UIColor+customColors.swift in Sources */,
+				048EFF9120E7EB4600AF7CB2 /* BallSectionModel.swift in Sources */,
 				04CD6F2C20E2E96400985BA2 /* CounterViewModel.swift in Sources */,
 				04CD6F1020E2D96F00985BA2 /* AppDelegate.swift in Sources */,
 				04CD6F2720E2DC9900985BA2 /* MainViewController.swift in Sources */,
