@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Balls_Counter" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="1vY-VZ-VNO" id="ZIE-vM-ad1"/>
+                <outlet property="startButton" destination="1OB-yK-JWD" id="qNs-Oa-F2m"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,25 +24,40 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G7u-ZU-hIp" userLabel="Buttons Container">
                     <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OB-yK-JWD">
+                            <rect key="frame" x="45" y="0.0" width="46" height="50"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="1OB-yK-JWD" firstAttribute="top" secondItem="G7u-ZU-hIp" secondAttribute="top" id="UU9-iQ-8ga"/>
                         <constraint firstAttribute="height" constant="50" id="Ze3-XF-Tut"/>
+                        <constraint firstAttribute="bottom" secondItem="1OB-yK-JWD" secondAttribute="bottom" id="fdI-5z-4OW"/>
+                        <constraint firstItem="1OB-yK-JWD" firstAttribute="leading" secondItem="G7u-ZU-hIp" secondAttribute="leading" constant="45" id="g9B-ct-kUf"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MainViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQG-kv-vE5">
-                    <rect key="frame" x="113.5" y="323" width="148.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1vY-VZ-VNO">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PhZ-Yo-kTz">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="G7u-ZU-hIp" secondAttribute="bottom" id="BWx-dX-1iI"/>
                 <constraint firstItem="G7u-ZU-hIp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KII-pB-nR8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="G7u-ZU-hIp" secondAttribute="trailing" id="O5V-eg-1Zz"/>
-                <constraint firstItem="dQG-kv-vE5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Rq8-dZ-Y61"/>
-                <constraint firstItem="dQG-kv-vE5" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="TEq-25-tJl"/>
+                <constraint firstItem="1vY-VZ-VNO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TDU-At-4Iy"/>
+                <constraint firstItem="G7u-ZU-hIp" firstAttribute="top" secondItem="1vY-VZ-VNO" secondAttribute="bottom" id="TX2-ju-1cw"/>
+                <constraint firstAttribute="trailing" secondItem="1vY-VZ-VNO" secondAttribute="trailing" id="pxu-ei-VB0"/>
+                <constraint firstItem="1vY-VZ-VNO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vQ8-kR-a6t"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

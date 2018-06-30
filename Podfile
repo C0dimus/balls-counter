@@ -6,7 +6,7 @@ target 'Balls Counter' do
   use_frameworks!
 
   # Pods for Balls Counter
-  pod 'RxSwift'
-  pod 'RxCocoa'
+  pod 'RxSwift', '~> 4.1.2'
+  pod 'RxCocoa', '~> 4.1.2'
 
 end

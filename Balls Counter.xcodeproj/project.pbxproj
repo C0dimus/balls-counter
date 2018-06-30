@@ -13,6 +13,8 @@
 		04CD6F1A20E2D96F00985BA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CD6F1820E2D96F00985BA2 /* LaunchScreen.storyboard */; };
 		04CD6F2720E2DC9900985BA2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD6F2520E2DC9900985BA2 /* MainViewController.swift */; };
 		04CD6F2820E2DC9900985BA2 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CD6F2620E2DC9900985BA2 /* MainViewController.xib */; };
+		04CD6F2A20E2E7CF00985BA2 /* BallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD6F2920E2E7CF00985BA2 /* BallModel.swift */; };
+		04CD6F2C20E2E96400985BA2 /* CounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD6F2B20E2E96400985BA2 /* CounterViewModel.swift */; };
 		942D2E7F7D6A18386AF3B488 /* Pods_Balls_Counter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A939569803CEBC60382A322 /* Pods_Balls_Counter.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		04CD6F1B20E2D96F00985BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04CD6F2520E2DC9900985BA2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = SOURCE_ROOT; };
 		04CD6F2620E2DC9900985BA2 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = SOURCE_ROOT; };
+		04CD6F2920E2E7CF00985BA2 /* BallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallModel.swift; sourceTree = "<group>"; };
+		04CD6F2B20E2E96400985BA2 /* CounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewModel.swift; sourceTree = "<group>"; };
 		097A10D88EB14129F21AB107 /* Pods-Balls Counter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Balls Counter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Balls Counter/Pods-Balls Counter.debug.xcconfig"; sourceTree = "<group>"; };
 		5A939569803CEBC60382A322 /* Pods_Balls_Counter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Balls_Counter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE0BC2FA1A9E8609C44A1026 /* Pods-Balls Counter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Balls Counter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Balls Counter/Pods-Balls Counter.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,7 +67,7 @@
 		04CD6F0E20E2D96F00985BA2 /* Balls Counter */ = {
 			isa = PBXGroup;
 			children = (
-				04CD6F2120E2DC0F00985BA2 /* Controller */,
+				04CD6F2120E2DC0F00985BA2 /* ViewController */,
 				04CD6F2220E2DC2100985BA2 /* ViewModel */,
 				04CD6F2320E2DC2B00985BA2 /* View */,
 				04CD6F2420E2DC3400985BA2 /* Model */,
@@ -76,18 +80,19 @@
 			path = "Balls Counter";
 			sourceTree = "<group>";
 		};
-		04CD6F2120E2DC0F00985BA2 /* Controller */ = {
+		04CD6F2120E2DC0F00985BA2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				04CD6F2520E2DC9900985BA2 /* MainViewController.swift */,
 				04CD6F2620E2DC9900985BA2 /* MainViewController.xib */,
 			);
-			path = Controller;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		04CD6F2220E2DC2100985BA2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				04CD6F2B20E2E96400985BA2 /* CounterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 		04CD6F2420E2DC3400985BA2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04CD6F2920E2E7CF00985BA2 /* BallModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,6 +261,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CD6F2A20E2E7CF00985BA2 /* BallModel.swift in Sources */,
+				04CD6F2C20E2E96400985BA2 /* CounterViewModel.swift in Sources */,
 				04CD6F1020E2D96F00985BA2 /* AppDelegate.swift in Sources */,
 				04CD6F2720E2DC9900985BA2 /* MainViewController.swift in Sources */,
 			);
