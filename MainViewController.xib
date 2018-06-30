@@ -4,16 +4,22 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Balls_Counter" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="1vY-VZ-VNO" id="ZIE-vM-ad1"/>
                 <outlet property="startButton" destination="1OB-yK-JWD" id="qNs-Oa-F2m"/>
+                <outlet property="stopResetButton" destination="a63-45-fnt" id="hf4-Np-lj4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,23 +29,49 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G7u-ZU-hIp" userLabel="Buttons Container">
-                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <rect key="frame" x="40" y="597" width="295" height="50"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OB-yK-JWD">
-                            <rect key="frame" x="45" y="0.0" width="46" height="50"/>
-                            <state key="normal" title="Button"/>
+                            <rect key="frame" x="0.0" y="0.0" width="112.5" height="50"/>
+                            <color key="backgroundColor" red="0.28235294117647058" green="0.50980392156862742" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                            <state key="normal" title="Start">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a63-45-fnt">
+                            <rect key="frame" x="182.5" y="0.0" width="112.5" height="50"/>
+                            <color key="backgroundColor" red="0.81176470590000005" green="0.062745098040000002" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                            <state key="normal" title="Stop">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="a63-45-fnt" firstAttribute="width" secondItem="1OB-yK-JWD" secondAttribute="width" id="Gr5-GO-ie5"/>
                         <constraint firstItem="1OB-yK-JWD" firstAttribute="top" secondItem="G7u-ZU-hIp" secondAttribute="top" id="UU9-iQ-8ga"/>
                         <constraint firstAttribute="height" constant="50" id="Ze3-XF-Tut"/>
                         <constraint firstAttribute="bottom" secondItem="1OB-yK-JWD" secondAttribute="bottom" id="fdI-5z-4OW"/>
-                        <constraint firstItem="1OB-yK-JWD" firstAttribute="leading" secondItem="G7u-ZU-hIp" secondAttribute="leading" constant="45" id="g9B-ct-kUf"/>
+                        <constraint firstItem="1OB-yK-JWD" firstAttribute="leading" secondItem="G7u-ZU-hIp" secondAttribute="leading" id="g9B-ct-kUf"/>
+                        <constraint firstAttribute="bottom" secondItem="a63-45-fnt" secondAttribute="bottom" id="pj2-ft-d5r"/>
+                        <constraint firstAttribute="trailing" secondItem="a63-45-fnt" secondAttribute="trailing" id="sfX-Tw-X67"/>
+                        <constraint firstItem="a63-45-fnt" firstAttribute="top" secondItem="G7u-ZU-hIp" secondAttribute="top" id="vwG-ns-jRX"/>
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1vY-VZ-VNO">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="597"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PhZ-Yo-kTz">
                         <size key="itemSize" width="50" height="50"/>
@@ -51,9 +83,10 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="G7u-ZU-hIp" secondAttribute="bottom" id="BWx-dX-1iI"/>
-                <constraint firstItem="G7u-ZU-hIp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KII-pB-nR8"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="G7u-ZU-hIp" secondAttribute="trailing" id="O5V-eg-1Zz"/>
+                <constraint firstItem="1OB-yK-JWD" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.3" id="1ib-Z2-uIb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="G7u-ZU-hIp" secondAttribute="bottom" constant="20" id="BWx-dX-1iI"/>
+                <constraint firstItem="G7u-ZU-hIp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="KII-pB-nR8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="G7u-ZU-hIp" secondAttribute="trailing" constant="40" id="O5V-eg-1Zz"/>
                 <constraint firstItem="1vY-VZ-VNO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TDU-At-4Iy"/>
                 <constraint firstItem="G7u-ZU-hIp" firstAttribute="top" secondItem="1vY-VZ-VNO" secondAttribute="bottom" id="TX2-ju-1cw"/>
                 <constraint firstAttribute="trailing" secondItem="1vY-VZ-VNO" secondAttribute="trailing" id="pxu-ei-VB0"/>

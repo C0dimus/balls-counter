@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		048EFF8B20E7906500AF7CB2 /* BallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EFF8920E7906500AF7CB2 /* BallCollectionViewCell.swift */; };
+		048EFF8C20E7906500AF7CB2 /* BallCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048EFF8A20E7906500AF7CB2 /* BallCollectionViewCell.xib */; };
+		048EFF8F20E792D400AF7CB2 /* UIColor+customColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EFF8E20E792D400AF7CB2 /* UIColor+customColors.swift */; };
 		04CD6F1020E2D96F00985BA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD6F0F20E2D96F00985BA2 /* AppDelegate.swift */; };
 		04CD6F1520E2D96F00985BA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CD6F1320E2D96F00985BA2 /* Main.storyboard */; };
 		04CD6F1720E2D96F00985BA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CD6F1620E2D96F00985BA2 /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		048EFF8920E7906500AF7CB2 /* BallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallCollectionViewCell.swift; sourceTree = "<group>"; };
+		048EFF8A20E7906500AF7CB2 /* BallCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BallCollectionViewCell.xib; sourceTree = "<group>"; };
+		048EFF8E20E792D400AF7CB2 /* UIColor+customColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+customColors.swift"; sourceTree = "<group>"; };
 		04CD6F0C20E2D96F00985BA2 /* Balls Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Balls Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CD6F0F20E2D96F00985BA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04CD6F1420E2D96F00985BA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		048EFF8D20E7925200AF7CB2 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				048EFF8E20E792D400AF7CB2 /* UIColor+customColors.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		04CD6F0320E2D96F00985BA2 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +85,7 @@
 				04CD6F2220E2DC2100985BA2 /* ViewModel */,
 				04CD6F2320E2DC2B00985BA2 /* View */,
 				04CD6F2420E2DC3400985BA2 /* Model */,
+				048EFF8D20E7925200AF7CB2 /* Util */,
 				04CD6F0F20E2D96F00985BA2 /* AppDelegate.swift */,
 				04CD6F1320E2D96F00985BA2 /* Main.storyboard */,
 				04CD6F1620E2D96F00985BA2 /* Assets.xcassets */,
@@ -100,6 +115,8 @@
 		04CD6F2320E2DC2B00985BA2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				048EFF8920E7906500AF7CB2 /* BallCollectionViewCell.swift */,
+				048EFF8A20E7906500AF7CB2 /* BallCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048EFF8C20E7906500AF7CB2 /* BallCollectionViewCell.xib in Resources */,
 				04CD6F1A20E2D96F00985BA2 /* LaunchScreen.storyboard in Resources */,
 				04CD6F1720E2D96F00985BA2 /* Assets.xcassets in Resources */,
 				04CD6F1520E2D96F00985BA2 /* Main.storyboard in Resources */,
@@ -261,7 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048EFF8B20E7906500AF7CB2 /* BallCollectionViewCell.swift in Sources */,
 				04CD6F2A20E2E7CF00985BA2 /* BallModel.swift in Sources */,
+				048EFF8F20E792D400AF7CB2 /* UIColor+customColors.swift in Sources */,
 				04CD6F2C20E2E96400985BA2 /* CounterViewModel.swift in Sources */,
 				04CD6F1020E2D96F00985BA2 /* AppDelegate.swift in Sources */,
 				04CD6F2720E2DC9900985BA2 /* MainViewController.swift in Sources */,

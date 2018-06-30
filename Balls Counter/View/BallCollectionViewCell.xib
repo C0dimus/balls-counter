@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BallCollectionViewCell" id="gTV-IL-0wX" customClass="BallCollectionViewCell" customModule="Balls_Counter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Sn-bt-6bV">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sz0-F4-7hJ">
+                                <rect key="frame" x="27" y="39.5" width="46" height="21.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Sz0-F4-7hJ" firstAttribute="centerY" secondItem="0Sn-bt-6bV" secondAttribute="centerY" id="L56-Pu-7zi"/>
+                            <constraint firstItem="Sz0-F4-7hJ" firstAttribute="centerX" secondItem="0Sn-bt-6bV" secondAttribute="centerX" id="yxW-rS-LzQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0Sn-bt-6bV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="5UF-bq-GqX"/>
+                <constraint firstAttribute="bottom" secondItem="0Sn-bt-6bV" secondAttribute="bottom" id="qO7-iY-Isd"/>
+                <constraint firstItem="0Sn-bt-6bV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tQy-dz-O6u"/>
+                <constraint firstAttribute="trailing" secondItem="0Sn-bt-6bV" secondAttribute="trailing" id="yUd-ua-PJh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="bgView" destination="0Sn-bt-6bV" id="F3O-M1-sUP"/>
+                <outlet property="valueLabel" destination="Sz0-F4-7hJ" id="MI1-sU-0Po"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
