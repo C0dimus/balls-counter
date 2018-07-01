@@ -4,11 +4,15 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -17,13 +21,59 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DHm-Ww-wlQ" userLabel="CenterView ">
+                                <rect key="frame" x="94" y="202" width="186" height="263"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balls Counter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsJ-2D-Hh4">
+                                        <rect key="frame" x="-4" y="0.0" width="194" height="36"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball_red" translatesAutoresizingMaskIntoConstraints="NO" id="5WU-Yo-JGS">
+                                        <rect key="frame" x="-4" y="73" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="gMa-df-YJj"/>
+                                            <constraint firstAttribute="height" constant="100" id="umZ-7u-G90"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball_blue" translatesAutoresizingMaskIntoConstraints="NO" id="wlN-Iu-baw">
+                                        <rect key="frame" x="86" y="163" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="NuY-1H-Nd4"/>
+                                            <constraint firstAttribute="width" constant="100" id="mf3-Js-JSO"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="wlN-Iu-baw" firstAttribute="leading" secondItem="5WU-Yo-JGS" secondAttribute="trailing" constant="-10" id="1I4-YR-1IU"/>
+                                    <constraint firstItem="5WU-Yo-JGS" firstAttribute="top" secondItem="XsJ-2D-Hh4" secondAttribute="bottom" constant="37" id="FFW-Wl-Efy"/>
+                                    <constraint firstItem="wlN-Iu-baw" firstAttribute="top" secondItem="5WU-Yo-JGS" secondAttribute="bottom" constant="-10" id="KL3-Ye-fb1"/>
+                                    <constraint firstItem="XsJ-2D-Hh4" firstAttribute="top" secondItem="DHm-Ww-wlQ" secondAttribute="top" id="Mpw-25-iTB"/>
+                                    <constraint firstItem="5WU-Yo-JGS" firstAttribute="leading" secondItem="XsJ-2D-Hh4" secondAttribute="leading" id="ULA-cy-EKj"/>
+                                    <constraint firstAttribute="trailing" secondItem="wlN-Iu-baw" secondAttribute="trailing" id="btn-s4-bfT"/>
+                                    <constraint firstItem="XsJ-2D-Hh4" firstAttribute="centerX" secondItem="DHm-Ww-wlQ" secondAttribute="centerX" id="jdo-O4-IHf"/>
+                                    <constraint firstAttribute="bottom" secondItem="wlN-Iu-baw" secondAttribute="bottom" id="xwb-Cj-PIL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DHm-Ww-wlQ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="7xa-a3-hSf"/>
+                            <constraint firstItem="DHm-Ww-wlQ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="t70-39-9eX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ball_blue" width="100" height="100"/>
+        <image name="ball_red" width="100" height="100"/>
+    </resources>
 </document>

@@ -31,10 +31,10 @@ class BallCollectionViewCell: UICollectionViewCell {
             bgView.backgroundColor = UIColor.niceBlue()
             valueLabel.text = String(ballModel.value * 3)
         }
-        animateBorderAlpha(ballModel.type)
+        animateBorderBackground(for: ballModel.type)
     }
     
-    private func animateBorderAlpha(_ type: BallModelType) {
+    private func animateBorderBackground(for type: BallModelType) {
         let duration = MainViewController.timeInterval * 0.5
         UIView.animate(withDuration: duration, animations: {
             self.borderView.backgroundColor = type == .red ? UIColor.lavaRed(alpha: 0.5) : UIColor.niceBlue(alpha: 0.5)
