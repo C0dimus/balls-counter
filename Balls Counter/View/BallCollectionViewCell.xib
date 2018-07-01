@@ -23,34 +23,47 @@
                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Sn-bt-6bV">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QeM-0j-Dl3" userLabel="Border View">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sz0-F4-7hJ">
-                                <rect key="frame" x="27" y="39.5" width="46" height="21.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Sn-bt-6bV">
+                                <rect key="frame" x="5" y="5" width="90" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sz0-F4-7hJ">
+                                        <rect key="frame" x="22" y="34.5" width="46" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.81176470590000005" green="0.062745098040000002" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Sz0-F4-7hJ" firstAttribute="centerY" secondItem="0Sn-bt-6bV" secondAttribute="centerY" id="L56-Pu-7zi"/>
+                                    <constraint firstItem="Sz0-F4-7hJ" firstAttribute="centerX" secondItem="0Sn-bt-6bV" secondAttribute="centerX" id="yxW-rS-LzQ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.81176470590000005" green="0.062745098040000002" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Sz0-F4-7hJ" firstAttribute="centerY" secondItem="0Sn-bt-6bV" secondAttribute="centerY" id="L56-Pu-7zi"/>
-                            <constraint firstItem="Sz0-F4-7hJ" firstAttribute="centerX" secondItem="0Sn-bt-6bV" secondAttribute="centerX" id="yxW-rS-LzQ"/>
+                            <constraint firstAttribute="bottom" secondItem="0Sn-bt-6bV" secondAttribute="bottom" constant="5" id="UcJ-Bw-a2B"/>
+                            <constraint firstItem="0Sn-bt-6bV" firstAttribute="top" secondItem="QeM-0j-Dl3" secondAttribute="top" constant="5" id="fLM-pa-h1j"/>
+                            <constraint firstItem="0Sn-bt-6bV" firstAttribute="leading" secondItem="QeM-0j-Dl3" secondAttribute="leading" constant="5" id="mGq-5B-pUa"/>
+                            <constraint firstAttribute="trailing" secondItem="0Sn-bt-6bV" secondAttribute="trailing" constant="5" id="xO6-K3-ZmN"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="0Sn-bt-6bV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="5UF-bq-GqX"/>
-                <constraint firstAttribute="bottom" secondItem="0Sn-bt-6bV" secondAttribute="bottom" id="qO7-iY-Isd"/>
-                <constraint firstItem="0Sn-bt-6bV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tQy-dz-O6u"/>
-                <constraint firstAttribute="trailing" secondItem="0Sn-bt-6bV" secondAttribute="trailing" id="yUd-ua-PJh"/>
+                <constraint firstAttribute="trailing" secondItem="QeM-0j-Dl3" secondAttribute="trailing" id="Mzy-Yb-8pQ"/>
+                <constraint firstItem="QeM-0j-Dl3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="RyU-8f-QaK"/>
+                <constraint firstItem="QeM-0j-Dl3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="n02-zD-c7Q"/>
+                <constraint firstAttribute="bottom" secondItem="QeM-0j-Dl3" secondAttribute="bottom" id="xNC-Y0-poo"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
                 <outlet property="bgView" destination="0Sn-bt-6bV" id="F3O-M1-sUP"/>
+                <outlet property="borderView" destination="QeM-0j-Dl3" id="WGf-97-Qsh"/>
                 <outlet property="valueLabel" destination="Sz0-F4-7hJ" id="MI1-sU-0Po"/>
             </connections>
         </collectionViewCell>

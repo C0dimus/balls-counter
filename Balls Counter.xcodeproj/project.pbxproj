@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0438982F20E902BC007A6FE2 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0438982D20E902BC007A6FE2 /* MainViewController.xib */; };
+		0438983020E902BC007A6FE2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0438982E20E902BC007A6FE2 /* MainViewController.swift */; };
 		048EFF8B20E7906500AF7CB2 /* BallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EFF8920E7906500AF7CB2 /* BallCollectionViewCell.swift */; };
 		048EFF8C20E7906500AF7CB2 /* BallCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048EFF8A20E7906500AF7CB2 /* BallCollectionViewCell.xib */; };
 		048EFF8F20E792D400AF7CB2 /* UIColor+customColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EFF8E20E792D400AF7CB2 /* UIColor+customColors.swift */; };
@@ -15,14 +17,17 @@
 		04CD6F1520E2D96F00985BA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CD6F1320E2D96F00985BA2 /* Main.storyboard */; };
 		04CD6F1720E2D96F00985BA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CD6F1620E2D96F00985BA2 /* Assets.xcassets */; };
 		04CD6F1A20E2D96F00985BA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CD6F1820E2D96F00985BA2 /* LaunchScreen.storyboard */; };
-		04CD6F2720E2DC9900985BA2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD6F2520E2DC9900985BA2 /* MainViewController.swift */; };
-		04CD6F2820E2DC9900985BA2 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CD6F2620E2DC9900985BA2 /* MainViewController.xib */; };
 		04CD6F2A20E2E7CF00985BA2 /* BallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD6F2920E2E7CF00985BA2 /* BallModel.swift */; };
 		04CD6F2C20E2E96400985BA2 /* CounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD6F2B20E2E96400985BA2 /* CounterViewModel.swift */; };
+		04EA2C7620E8D93F001B61D1 /* BallCollectionDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA2C7420E8D93F001B61D1 /* BallCollectionDecorationView.swift */; };
+		04EA2C7720E8D93F001B61D1 /* BallCollectionDecorationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EA2C7520E8D93F001B61D1 /* BallCollectionDecorationView.xib */; };
+		04EA2C7920E8D98A001B61D1 /* BallCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA2C7820E8D98A001B61D1 /* BallCollectionViewLayout.swift */; };
 		942D2E7F7D6A18386AF3B488 /* Pods_Balls_Counter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A939569803CEBC60382A322 /* Pods_Balls_Counter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0438982D20E902BC007A6FE2 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		0438982E20E902BC007A6FE2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		048EFF8920E7906500AF7CB2 /* BallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallCollectionViewCell.swift; sourceTree = "<group>"; };
 		048EFF8A20E7906500AF7CB2 /* BallCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BallCollectionViewCell.xib; sourceTree = "<group>"; };
 		048EFF8E20E792D400AF7CB2 /* UIColor+customColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+customColors.swift"; sourceTree = "<group>"; };
@@ -33,10 +38,11 @@
 		04CD6F1620E2D96F00985BA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04CD6F1920E2D96F00985BA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04CD6F1B20E2D96F00985BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04CD6F2520E2DC9900985BA2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = SOURCE_ROOT; };
-		04CD6F2620E2DC9900985BA2 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = SOURCE_ROOT; };
 		04CD6F2920E2E7CF00985BA2 /* BallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallModel.swift; sourceTree = "<group>"; };
 		04CD6F2B20E2E96400985BA2 /* CounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewModel.swift; sourceTree = "<group>"; };
+		04EA2C7420E8D93F001B61D1 /* BallCollectionDecorationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallCollectionDecorationView.swift; sourceTree = "<group>"; };
+		04EA2C7520E8D93F001B61D1 /* BallCollectionDecorationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BallCollectionDecorationView.xib; sourceTree = "<group>"; };
+		04EA2C7820E8D98A001B61D1 /* BallCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallCollectionViewLayout.swift; sourceTree = "<group>"; };
 		097A10D88EB14129F21AB107 /* Pods-Balls Counter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Balls Counter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Balls Counter/Pods-Balls Counter.debug.xcconfig"; sourceTree = "<group>"; };
 		5A939569803CEBC60382A322 /* Pods_Balls_Counter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Balls_Counter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE0BC2FA1A9E8609C44A1026 /* Pods-Balls Counter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Balls Counter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Balls Counter/Pods-Balls Counter.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,8 +106,8 @@
 		04CD6F2120E2DC0F00985BA2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				04CD6F2520E2DC9900985BA2 /* MainViewController.swift */,
-				04CD6F2620E2DC9900985BA2 /* MainViewController.xib */,
+				0438982E20E902BC007A6FE2 /* MainViewController.swift */,
+				0438982D20E902BC007A6FE2 /* MainViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -119,6 +125,9 @@
 			children = (
 				048EFF8920E7906500AF7CB2 /* BallCollectionViewCell.swift */,
 				048EFF8A20E7906500AF7CB2 /* BallCollectionViewCell.xib */,
+				04EA2C7420E8D93F001B61D1 /* BallCollectionDecorationView.swift */,
+				04EA2C7520E8D93F001B61D1 /* BallCollectionDecorationView.xib */,
+				04EA2C7820E8D98A001B61D1 /* BallCollectionViewLayout.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,9 +222,10 @@
 			files = (
 				048EFF8C20E7906500AF7CB2 /* BallCollectionViewCell.xib in Resources */,
 				04CD6F1A20E2D96F00985BA2 /* LaunchScreen.storyboard in Resources */,
+				04EA2C7720E8D93F001B61D1 /* BallCollectionDecorationView.xib in Resources */,
 				04CD6F1720E2D96F00985BA2 /* Assets.xcassets in Resources */,
 				04CD6F1520E2D96F00985BA2 /* Main.storyboard in Resources */,
-				04CD6F2820E2DC9900985BA2 /* MainViewController.xib in Resources */,
+				0438982F20E902BC007A6FE2 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,11 +298,13 @@
 			files = (
 				048EFF8B20E7906500AF7CB2 /* BallCollectionViewCell.swift in Sources */,
 				04CD6F2A20E2E7CF00985BA2 /* BallModel.swift in Sources */,
+				04EA2C7920E8D98A001B61D1 /* BallCollectionViewLayout.swift in Sources */,
 				048EFF8F20E792D400AF7CB2 /* UIColor+customColors.swift in Sources */,
+				04EA2C7620E8D93F001B61D1 /* BallCollectionDecorationView.swift in Sources */,
 				048EFF9120E7EB4600AF7CB2 /* BallSectionModel.swift in Sources */,
 				04CD6F2C20E2E96400985BA2 /* CounterViewModel.swift in Sources */,
 				04CD6F1020E2D96F00985BA2 /* AppDelegate.swift in Sources */,
-				04CD6F2720E2DC9900985BA2 /* MainViewController.swift in Sources */,
+				0438983020E902BC007A6FE2 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

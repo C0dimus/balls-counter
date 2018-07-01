@@ -9,11 +9,12 @@
 import UIKit
 
 extension UIColor {
-    class var lavaRed: UIColor {
-        return UIColor(red: 207/255, green: 16/255, blue: 32/255, alpha: 1)
+    class func lavaRed(alpha: CGFloat = 1) -> UIColor {
+        return UIColor(red: 207/255, green: 16/255, blue: 32/255, alpha: alpha)
     }
     
-    class var niceBlue: UIColor {
-        return UIColor(red: 16/255, green: 128/255, blue: 207/255, alpha: 1)
+    class func niceBlue(alpha: CGFloat = 1) -> UIColor {
+        return UIColor(red: 16/255, green: 128/255, blue: 207/255, alpha: alpha)
     }
+    
 }

@@ -9,16 +9,16 @@
 import Foundation
 import RxDataSources
 
-enum BallType: Int {
+enum BallModelType: Int {
     case red, blue
 }
 
 struct BallModel {
     let id: Int
-    let type: BallType
+    let type: BallModelType
     var value: Int = 0
     
-    init(id: Int, type: BallType) {
+    init(id: Int, type: BallModelType) {
         self.id = id
         self.type = type
     }

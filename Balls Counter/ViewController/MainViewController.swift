@@ -16,9 +16,10 @@ class MainViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopResetButton: UIButton!
     
-    private static let timeInterval = 1.0
+    static let timeInterval = 1.0
     private let disposeBag = DisposeBag()
     private var counterViewModel = CounterViewModel()
+    private let collectionLayout = BallCollectionViewLayout()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +27,16 @@ class MainViewController: UIViewController {
         bindButtons()
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        collectionView.collectionViewLayout = collectionLayout
+    }
+    
     private func prepareCollectionView() {
-        collectionView.register(UINib(nibName: BallCollectionViewCell.CellId, bundle: Bundle.main), forCellWithReuseIdentifier: BallCollectionViewCell.CellId)
+        collectionView.register(UINib(nibName: BallCollectionViewCell.cellId, bundle: Bundle.main), forCellWithReuseIdentifier: BallCollectionViewCell.cellId)
 
         let dataSource = RxCollectionViewSectionedAnimatedDataSource<BallSectionModel>(configureCell:  { (_, collectionView, indexPath, ballModel) in
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BallCollectionViewCell.CellId, for: indexPath) as! BallCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BallCollectionViewCell.cellId, for: indexPath) as! BallCollectionViewCell
             cell.fill(with: ballModel)
             return cell
         }, configureSupplementaryView: {_, _, _, _ in return UICollectionReusableView() })

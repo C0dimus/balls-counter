@@ -33,7 +33,7 @@ enum RandomAction {
 }
 
 struct CounterViewModel {
-    private static let requiredBallsNumber = 5
+    static let requiredBallsNumber = 5
     var balls = Variable<[BallModel]>([])
     var isTimerRunning = Variable<Bool>(false)
     private var previousBallValue = 0
@@ -54,7 +54,7 @@ struct CounterViewModel {
     
     private mutating func generateRandomBall() {
         let randomNumber = Int(arc4random_uniform(2))
-        if let ballType = BallType(rawValue: randomNumber) {
+        if let ballType = BallModelType(rawValue: randomNumber) {
             let randomBall = BallModel(id: ballIdentifier, type: ballType)
             balls.value.append(randomBall)
             ballIdentifier += 1
